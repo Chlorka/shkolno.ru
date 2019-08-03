@@ -1,0 +1,36 @@
+_list-reset() {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+_link-reverse() {
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}	
+}
+
+.ww-group {
+	&:before, &:after { content: ""; display: table; }
+	&:after { clear: both; }
+	*zoom: 1;
+}
+
+.ww-clear {
+  clear: both;
+}
+
+/* --- BLOCK ---- */
+.ww-block { 
+  border: 1px solid #a5a5a6;
+  border-radius: 3px;
+  overflow: hidden;
+  
+	> header {
+	  padding: 9px 10px;
+	  border-bottom: 1px solid #a5a5a6;
+	  font-size: 14px;
+	  background: #c5c6c6 url("images/h_bg.gif") left top repeat-x;
+	}
+}

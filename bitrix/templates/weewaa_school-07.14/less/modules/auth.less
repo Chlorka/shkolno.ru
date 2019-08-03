@@ -1,0 +1,87 @@
+.bx-system-auth-form {
+	float: right;
+	color: @color;
+	
+	form {
+		display: inline;
+	}
+		
+	fieldset {
+		display: inline;
+		padding: 0 2px;
+		vertical-align: bottom;
+	}
+	
+	input[type=text],
+	input[type=password],
+	input[type=email] {
+		width: 80px;
+		height: 15px;
+	}
+	
+	a {
+		color: @color;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 0.8em;
+		
+		_link-reverse;		
+	}
+	
+	input[type=submit],
+	input[type=rest],
+	button {
+		background-color: @color !important;
+		color: #fff !important;
+		border-radius: 2px !important;
+		height: 19px !important;
+		width: 20px;
+		vertical-align: top;
+		margin: -2px 0 0 !important;
+	}
+	
+	.pm-form__link {
+		padding-left: 10px;
+	}
+}
+
+.bx-system-auth-form p {
+	font-size: 0.8em;
+	margin: 0;
+	display: inline;
+}
+
+.pm-site-auth fieldset {
+	margin: 0;
+}
+
+.pm-site-auth .pm-form__button {
+	text-indent: 0;
+}
+
+#pm-container .pm-site-auth input[type=submit] {
+	border: 0 none;
+	background: none;
+	padding: 0;
+	margin: 0;
+	outline: 0;
+	display: inline;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	
+	color: #a6755a;
+}
+
+.pm-site-auth label {
+	display: none;
+}
+
+.pm-site-auth input[type=checkbox] + label {
+	display: none;
+}
+
+///////////
+div.bx-auth-title,
+div.bx-auth-services a:hover {
+	border-color: @color;
+}

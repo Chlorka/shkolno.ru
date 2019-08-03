@@ -1,0 +1,58 @@
+.pm-data-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 1em;
+}	
+	.pm-data-table thead td,
+	.pm-data-table thead th {
+		background-color: #B6B7BB;
+		color: #fff;
+		font-weight: bold;
+		text-transform: uppercase;
+		
+		padding: 4px 8px;
+		
+		border: 0 none;
+	}
+	
+	.pm-data-table td,
+	.pm-data-table th {
+		padding: 14px 8px;
+		font-size: 13px;
+		
+		border-bottom: 1px solid #B6B7BB;
+	}
+	
+	.pm-data-table .pm-col {
+		min-width: 75px;
+	}
+	
+	.pm-data-table tfoot td,
+	.pm-data-table tfoot th {
+		border: 0 none;
+		font-weight: bold;
+		font-size: 16px;
+		text-transform: uppercase;
+	}
+	
+	.pm-data-table .pm-data__price {
+		text-align: right;
+		font-weight: bold;
+		white-space: nowrap;
+		padding-right: 3%;
+		text-transform: uppercase;
+	}
+	
+///
+table.sale_basket_basket,
+table.sale_order_full {
+	background: transparent none;
+	td, th {
+		color: @color;
+		border-color: @color;
+	}
+}
+table.sale_order_full_table {
+	border-color: @color;
+	background: transparent none;
+}

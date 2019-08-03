@@ -1,0 +1,75 @@
+.row:before, .row:after { content: ""; display: table; }
+.row:after { clear: both; }
+.row { letter-spacing: -0.31em; word-spacing: -0.43em; *zoom: 1; }
+.row [class*=col_]:first-child, .row [class*=col_].odd { margin-left: 0; }
+
+.row [class*=col_] {
+	margin-left: 5%;
+	margin-bottom: 1em;
+	display: inline-block;
+	*display: inline;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+}
+
+.col_1 { width: 100%; }
+.col_2 { width: 47.5%; }	.col_2c { width: 47.5%; } 
+.col_3 { width: 30%; *width: 29.91%; }		.col_3c { width: 65%; }
+.col_4 { width: 21.25%; }	.col_4c { width: 73.75%; }
+.col_5 { width: 16%; }	.col_5c { width: 79%; }
+
+.col_4:nth-child(4n+1) {
+	margin-left: 0;
+}
+
+img, object, embed { max-width: 100%; }
+img { height: auto; }
+
+.video-holder {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+	display: block;
+}
+
+.video-holder iframe, .video-holder object, .video-holder embed {
+	position: absolute;	top: 0;	left: 0; width: 100%; height: 100%;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+
+gs(@col, @margin) {	
+	.col_@{col} {
+		margin-left: @margin; 
+		width: (100% - (@col - 1) * @margin) / @col;
+	}
+	.col_@{col}c {
+		margin-left: @margin;
+		width: (100% - (100% - (@col - 1) * @margin) / @col) - @margin
+	}
+	
+	.col_@{col}:first-child,
+	.col_@{col}c:first-child {
+		margin-left: 0;
+	}
+	
+	.col_@{col}:nth-child(@{col}n+1),
+	.col_@{col}c:nth-child(@{col}n+1) {
+		margin-left: 0;
+	}
+	
+	.col_@{col}c + .col_@{col} {
+		margin-left: 0;
+	}
+}
+
+gs(@col, @margin, @width) {
+	@_margin = @margin / @width * 100 + 0%;
+	gs(@col, @_margin)
+}

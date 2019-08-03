@@ -1,0 +1,1 @@
+<a target="_blank" href="http://www.vforme24.ru"><img title="logo_new_.gif" src="/upload/medialibrary/ec7/logo_new_.gif" alt="logo_new_.gif" height="59" width="118"></a>

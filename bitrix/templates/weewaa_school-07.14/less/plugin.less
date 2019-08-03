@@ -1,0 +1,59 @@
+.jcarousel {
+    position: relative;
+    overflow: hidden;
+	ul {
+	    width: 20000em;
+	    position: relative;
+	    _list-reset;
+	}
+	li {
+    float: left;
+	}
+}
+
+.jcarousel-control-prev, .jcarousel-control-next {
+  width: 9px;
+  height: 38px;
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+  
+  background-position: left top;
+  background-repeat: no-repeat;
+  
+  &.inactive {
+  	visibility: hidden;
+  }
+}
+.jcarousel-control-prev {
+  background-image: url('images/arr_prev.gif');
+  left: 0;
+}
+.jcarousel-control-next {
+  background-image: url('images/arr_next.gif');
+  right: 0;
+}
+
+.nivo-directionNav {
+  top: -7px;
+  position: absolute;
+  right: 0;
+  
+  a {
+    display: block;
+    width: 28px;
+    height: 28px;
+    line-height: 80px;
+    overflow: hidden;
+  }
+  .nivo-prevNav {
+ //   background: url('images/slide_icon.png') left top no-repeat;
+    top: 0;
+    left: 293px;
+  }
+  .nivo-nextNav {
+    background: url('images/slide_icon.png') right top no-repeat;
+    top: 0;
+    right: 0;
+  }
+}
